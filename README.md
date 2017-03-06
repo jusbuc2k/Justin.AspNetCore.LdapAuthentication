@@ -67,3 +67,4 @@ result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, m
 ## Other Notes
 
 By default, the result of the user store GetNormalizedUserNameAsync() method on the UserStore as the value for the distguished name when performing an LDAP bind. You can customize this by implementing a custom user store and the interface Justin.AspNetCore.LdapAuthentication.IUserLdapStore, which provides a GetDistinguishedNameAsync method that will be used instead of the normalized username.
+
