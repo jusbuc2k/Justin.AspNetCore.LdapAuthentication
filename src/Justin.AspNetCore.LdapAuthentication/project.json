@@ -1,0 +1,32 @@
+﻿{
+  "version": "1.0.0-preview00",
+  "copyright": "2017 Justin R. Buchanan",
+  "packOptions": {
+    "owners": [ "Justin R. Buchanan" ],
+    "summary": "Authenticate ASP.NET Core Identity users via LDAP bind.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jusbuc2k/Justin.AspNetCore.LdapAuthentication.git"
+    }
+  },
+  "title": "Justin.AspNetCore.LdapAuthentication",
+  "description": "Authenticate ASP.NET Core Identity users via LDAP bind.",
+  "projectUrl": "https://github.com/jusbuc2k/Justin.AspNetCore.LdapAuthentication",
+  "authors": [ "Justin R. Buchanan" ],
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "Microsoft.AspNetCore.Identity": "1.0.1",
+    "Novell.Directory.Ldap.NETStandard": "2.3.6"
+  },
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+  "buildOptions": {
+    "xmlDoc": true
+  },
+  "scripts": {
+    "postcompile": "dotnet pack --no-build"
+  }
+}
