@@ -47,7 +47,7 @@ Configure options and the custom User Manager in Startup *before* Identity:
 
 // You can use services.AddLdapAuthentication(setupAction => {...}) to configure the 
 // options manually instead of loading the configuration from Configuration.
-services.Configure<Justin.LdapAuthCore.LdapAuthenticationOptions>(this.Configuration.GetSection("LdapAuth"));
+services.Configure<Justin.AspNetCore.LdapAuthentication.LdapAuthenticationOptions>(this.Configuration.GetSection("LdapAuth"));
 
 // Add the custom user manager.
 services.AddIdentity<ApplicationUser, IdentityRole>()
