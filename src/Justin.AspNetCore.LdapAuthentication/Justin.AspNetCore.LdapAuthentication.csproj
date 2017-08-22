@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Authenticate ASP.NET Core Identity users via LDAP bind.</Description>
+    <Copyright>2017 Justin R. Buchanan</Copyright>
+    <AssemblyTitle>Justin.AspNetCore.LdapAuthentication</AssemblyTitle>
+    <VersionPrefix>1.0.0-preview00</VersionPrefix>
+    <Authors>Justin R. Buchanan</Authors>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Justin.AspNetCore.LdapAuthentication</AssemblyName>
+    <PackageId>Justin.AspNetCore.LdapAuthentication</PackageId>
+    <PackageProjectUrl>https://github.com/jusbuc2k/Justin.AspNetCore.LdapAuthentication</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jusbuc2k/Justin.AspNetCore.LdapAuthentication.git</RepositoryUrl>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="1.0.2" />
+    <PackageReference Include="Novell.Directory.Ldap.NETStandard" Version="2.3.6" />
+  </ItemGroup>
+
+  <Target Name="PostcompileScript" AfterTargets="Build">
+    <Exec Command="dotnet pack --no-build" />
+  </Target>
+
+</Project>
