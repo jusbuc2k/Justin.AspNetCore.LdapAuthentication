@@ -131,16 +131,6 @@ namespace Justin.AspNetCore.LdapAuthentication
             throw new NotSupportedException();
         }
 
-        /// <summary>
-        /// Throws a NotSupportedException.
-        /// </summary>
-        /// <param name="user"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public override Task<IdentityResult> RemovePasswordAsync(TUser user, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            throw new NotSupportedException();
-        }
     }
 
 }
