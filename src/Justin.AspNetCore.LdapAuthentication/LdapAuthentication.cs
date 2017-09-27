@@ -63,7 +63,7 @@ namespace Justin.AspNetCore.LdapAuthentication
             try
             {
                 _connection.Bind(distinguishedName, password);
-                return true;
+                return _connection.Bound;
             }
             catch (Exception ex)
             {
