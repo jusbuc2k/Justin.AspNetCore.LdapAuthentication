@@ -9,7 +9,7 @@ MIT
 ## Features
 
 - LDAP password authentication via a custom UserManager against any existing UserManager/UserStore combination.
-- Does not (yet) provide an LDAP based UserStore implementation
+- Does not (yet) provide an LDAP based UserStore implementation.
 - Does not support password changes or resets.
 
 ## Possible Future Features
@@ -37,7 +37,8 @@ Create LdapAuth settings in appsettings.json:
 ```json
   "LdapAuth": {
     "Hostname": "<<ldap server host name goes here>>",
-    "Port": 389
+    "Port": 389,
+    "Domain": "<<optional domain name goes here>>"
   },
 ```
 
