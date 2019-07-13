@@ -16,7 +16,7 @@
         public int Port { get; set; } = 389;
 
         /// <summary>
-        /// Gets or sets the domani name to use as distinguished name in conjuction with the username
+        /// Gets or sets the domain name to use as distinguished name in conjuction with the username
         /// </summary>
         public string Domain { get; set; }
     }
