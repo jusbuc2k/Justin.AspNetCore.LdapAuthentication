@@ -62,7 +62,8 @@ namespace Justin.AspNetCore.LdapAuthentication
 
             try
             {
-                _connection.Bind(distinguishedName, password);
+                var accountName = string.IsNullOrWhiteSpace(_options.Domain) ? distinguishedName : $"{_options.Domain}\\{distinguishedName}";
+                _connection.Bind(accountName, password);
                 return _connection.Bound;
             }
             catch (Exception ex)
