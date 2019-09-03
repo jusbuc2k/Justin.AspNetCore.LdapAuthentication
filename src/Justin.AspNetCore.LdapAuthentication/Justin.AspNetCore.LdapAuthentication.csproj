@@ -4,7 +4,7 @@
     <Description>Authenticate ASP.NET Core Identity users via LDAP bind.</Description>
     <Copyright>2017 Justin R. Buchanan</Copyright>
     <AssemblyTitle>Justin.AspNetCore.LdapAuthentication</AssemblyTitle>
-    <VersionPrefix>2.0.0-preview00</VersionPrefix>
+    <VersionPrefix>2.1.0</VersionPrefix>
     <Authors>Justin R. Buchanan</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Novell.Directory.Ldap.NETStandard" Version="2.3.8" />
   </ItemGroup>
 
