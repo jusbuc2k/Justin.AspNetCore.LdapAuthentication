@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{EBB7539D-9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Justin.AspNetCore.LdapAuthentication", "src\Justin.AspNetCore.LdapAuthentication\Justin.AspNetCore.LdapAuthentication.csproj", "{66FAE534-B19C-421E-ABB9-6F3381B8EAFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleMvc", "src\ExampleMvc\ExampleMvc.csproj", "{A3DAF2B8-1941-41CC-A6EE-EAF50AC22592}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{66FAE534-B19C-421E-ABB9-6F3381B8EAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66FAE534-B19C-421E-ABB9-6F3381B8EAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66FAE534-B19C-421E-ABB9-6F3381B8EAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3DAF2B8-1941-41CC-A6EE-EAF50AC22592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3DAF2B8-1941-41CC-A6EE-EAF50AC22592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3DAF2B8-1941-41CC-A6EE-EAF50AC22592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3DAF2B8-1941-41CC-A6EE-EAF50AC22592}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

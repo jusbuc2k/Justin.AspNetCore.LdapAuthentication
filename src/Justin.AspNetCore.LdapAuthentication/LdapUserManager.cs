@@ -65,6 +65,11 @@ namespace Justin.AspNetCore.LdapAuthentication
                     dn = await this.Store.GetNormalizedUserNameAsync(user, CancellationToken.None);
                 }
 
+                if (string.IsNullOrEmpty(dn))
+                {
+                    return false;
+                }
+
                 if (auth.ValidatePassword(dn, password))
                 {
                     return true;

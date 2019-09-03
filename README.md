@@ -9,7 +9,9 @@ MIT
 ## Features
 
 - LDAP password authentication via a custom UserManager against any existing UserManager/UserStore combination.
-- Does not (yet) provide an LDAP based UserStore implementation.
+- Does not (yet) provide an LDAP based UserStore implementation. **You must still create users in your identity store before they can authenticate**. In the
+example MVC application, you must first register a user account with a username/password, and then the user can authenticate with LDAP. Obviously this is not ideal,
+and in a real world application, you would implement your own IUserStore.
 - Does not support password changes or resets.
 
 ## Possible Future Features
@@ -45,14 +47,20 @@ Create LdapAuth settings in appsettings.json:
 Configure options and the custom User Manager in Startup *before* Identity:
 
 ```csharp
-
-// You can use services.AddLdapAuthentication(setupAction => {...}) to configure the 
-// options manually instead of loading the configuration from Configuration.
+// Use a configuration file section
 services.Configure<Justin.AspNetCore.LdapAuthentication.LdapAuthenticationOptions>(this.Configuration.GetSection("LdapAuth"));
 
+// OR you can use services.AddLdapAuthentication(setupAction => {...}) to configure the 
+// options manually instead of loading the configuration from Configuration.
+services.Configure<Justin.AspNetCore.LdapAuthentication.LdapAuthenticationOptions>(options => {
+    options.Hostname = "host-name-here";
+    options.Port = 389;
+    options.Domain = "domain-here"
+});
+
 // Add the custom user manager.
-services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddUserManager<Justin.AspNetCore.LdapAuthentication.LdapUserManager<ApplicationUser>>()
+services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddUserManager<Justin.AspNetCore.LdapAuthentication.LdapUserManager<IdentityUser>>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 ```
